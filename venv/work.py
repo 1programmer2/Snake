@@ -15,6 +15,7 @@ snakeBody = []
 
 apple = randomBlock(Color(60, 60, 60))
 
+# Мы можем изменить значения RGB существующего цвета, установив block.color.r, block.color.g, block.color.b.
 
 def changeColor(block):
     if (block.color.r < 255 and block.color.g < 255 and block.color.b < 255):
@@ -39,7 +40,7 @@ while True:
         if keypress.type == QUIT:
             quitGame()
 
-
+        # Здесь мы переключаем направления в зависимости от того, какая клавиша нажата
         elif keypress.type == KEYDOWN:
 
             if keypress.key == K_UP and direction != DOWN:
@@ -75,6 +76,6 @@ while True:
     if (hasEaten):
         apple = randomBlock(Color(40, 40, 40))
         snakeBody.append(Block(oldPiece, Color(80, 80, 80)))
-
+    # Графически рисует все обновления, которые мы только что сделали.
     draw(oldPiece, snakeHead, snakeBody, apple, hasEaten, screen)
     pygame.display.flip()
