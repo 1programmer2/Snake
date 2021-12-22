@@ -4,12 +4,14 @@ from pygame.locals import *
 from Helpers import *
 from Constants import *
 
-
+# Это голова змеи.
 snakeHead = Block(Rect(blockSize, blockSize, blockSize, blockSize), Color(50, 50, 50))
 
-
+# Это тело змеи.
 snakeBody = []
 
+# Это яблоко.
+# Вызов randomRect запускает яблоко в случайном месте на экране.
 
 apple = randomBlock(Color(60, 60, 60))
 
