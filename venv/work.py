@@ -57,7 +57,7 @@ while True:
 
 
     oldPiece = snakeHead.rect.copy()
-
+    # Поворачивает голову в том направлении, в котором мы находимся.
     snakeHead.moveInDir(direction)
 
 
@@ -69,7 +69,7 @@ while True:
     hasHitWall = snakeHead.rect.collidelist(walls) != -1
     hasHitBody = snakeHead.collideList(snakeBody)
     hasEaten = snakeHead.rect.colliderect(apple)
-
+    # Проверяет, не ударяился ли головой о стену.
     if(hasHitWall or hasHitBody):
         quitGame()
 
